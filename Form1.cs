@@ -139,14 +139,14 @@ namespace devcop
             }
             catch (Exception)
             {
-                MessageBox.Show("Se ocurre un error...\nIntente de nuevo.", "DEV COP", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se ocurre un error...\nIntente de nuevo!", "DEV COP", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
 
 
         /*
-        * METODO PARA ABRIR EL ARCHIVO
+        * METODO PARA LEER LA ENTRADA POR CONSOLA
         */
         private void readconsole()
         {
