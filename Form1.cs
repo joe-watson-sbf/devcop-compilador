@@ -16,6 +16,7 @@ namespace devcop
         OpenFileDialog openFileDialog = new OpenFileDialog();
         string referenciaArchivo, lineaActual;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace devcop
             listBox1.Hide();
 
             this.Width = 845;
-            this.Height = 486;
+            this.Height = 351;
+
         }
 
         // Boton para cerrar la app
@@ -44,8 +46,8 @@ namespace devcop
                 inputArchivo.ResetText();
 
                 this.Width = 845;
-                this.Height = 486;
-                btnCarga.Location = new Point(336, 333);
+                this.Height = 351;
+                btnCarga.Location = new Point(318, 218);
                 panel3.Location = new Point(39, 498);
             }
             
@@ -57,12 +59,13 @@ namespace devcop
         {
             if(radioButton1.Checked) // SI EL USUARIO ELIGE ESA OPCIÓN, ENTONCES CAMBIAMOS LA GRAFICA
             {
-                btnCarga.Location = new Point(656, 10);
-                this.Width = 845;
-                this.Height = 486;
+                btnCarga.Location = new Point(656, 14);
                 inputArchivo.Show();
                 inputConsola.Hide();
-                this.Location = new Point(537, 277);
+
+                this.Width = 845;
+                this.Height = 351;
+                this.CenterToScreen();
             }
             
         }
@@ -82,19 +85,22 @@ namespace devcop
                 inputArchivo.Text = referenciaArchivo;
                 if (inputArchivo.Text.Length > 0)
                 {
+                    this.Height = 451;
+                    this.CenterToScreen();
                     panel3.Location = new Point(145, 165);
                     listBox1.Show();
+                    referenciaArchivo = "";
                 }
             }
             else if(radioButton2.Checked)
             {
 
                 readconsole();
-
-                this.Width = 845; this.Height = 778;
                 listBox1.Show();
-                this.Location = new Point(537, 177);
-                panel3.Location = new Point(142, 484);
+                this.Width = 845;
+                this.Height = 651;
+                this.CenterToScreen();
+                panel3.Location = new Point(149, 354);
             }
             else
             {
